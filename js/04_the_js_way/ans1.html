@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Some musical instruments</h1>
+        <ul>
+          <li id="clarinet" class="wind woodwind">
+            The <a href="https://en.wikipedia.org/wiki/Clarinet">clarinet</a>
+          </li>
+          <li id="saxophone" class="wind woodwind">
+            The <a href="https://en.wikipedia.org/wiki/Saxophone">saxophone</a>
+          </li>
+          <li id="trumpet" class="wind brass">
+            The <a href="https://en.wikipedia.org/wiki/Trumpet">trumpet</a>
+          </li>
+          <li id="violin" class="chordophone">
+            The <a href="https://en.wikipedia.org/wiki/Violin">violin</a>
+          </li>
+          <li id="harpsichord">
+            The <a href="https://en.wikipedia.org/wiki/Harpsichord">harpsichord</a>
+          </li>
+        </ul>
+<script>
+    function linkInfo() {
+        // 1.打印出有多少A标签
+        const existingElementsA = document.getElementsByTagName("a");
+        console.log(existingElementsA.length);
+        // 2.打印出第一个标签的href 最后一个标签的href
+        if(!existingElementsA.length) return;
+        console.log(existingElementsA[0].href);
+        console.log(existingElementsA[existingElementsA.length-1].href);
+    }
+    linkInfo();
+    console.log(document.getElementById("saxophone")
+                        .classList.contains("wind")
+    );
+    // 实现功能判断某id的元素，具有某类名
+    const hasClass = (idName,className) => {
+        let id= document.getElementById(idName);
+       if(id){
+         console.log(className+ " " + id.classList.contains(className));
+       } else {
+         console.log("错误");
+       }
+    };
+    hasClass("saxophone","wind");
+</script>      
+</body>
+</html>

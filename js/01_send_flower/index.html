@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>talk in js-代理模式</title>
+</head>
+
+<body>
+    <script>
+        // object
+        // 描述的方式对象是怎样的
+        // 对象字面量 JSON Object
+        const xsj = {
+            name: "徐士杰",
+            age: 22,
+            yz: 46,
+            single: true,
+            hometown: '绍兴',
+            room: 1319,
+            // 属性
+            // 函数功能 行为
+            // 匿名函数， target 形参
+            sendFlower: function (target) {
+                // console.log(target.name);
+                target.receiveFlower(xsj);
+            }
+        };
+
+        const meimei = {
+            name: "梅梅",
+            age: 17,
+            mood: 50,
+            receiveFlower: function (sender) {
+                // 如果mood 大于80 再收花
+                // if (sender.yz < 85) {
+                //     console.log('收到了花,没空，不可能有空！');
+                // } else {
+                //     console.log('备胎排队一下');
+                // }
+                if(meimei.mood > 80){
+                    console.log('收到了花');
+                } else {
+                    console.log('没收到');
+                }
+                
+            },
+            listenGoodMood: function () {
+                // 心情不好
+                // 定时器
+                console.log('本公主谁都不想见！');
+                setTimeout(function () {
+                    // console.log('本公主心情变好了');
+                   meimei.mood = 100;
+                    meimei.receiveFlower();
+                }, 1500);
+
+
+            }
+        }
+
+        // 送花 A->B A->C->B
+        // A 送花 send_flower
+        // C 收花 转送给B
+        // B 收花 receive_flower
+        const huahua = {
+            name: "花花",
+            // 与梅梅实现了同样的接口
+            receiveFlower: function (sender) {
+                // if (sender.name === '徐士杰'){
+                //     console.log('还让我们在一起吧');
+                // } else {
+                //     meimei.receiveFlower(sender);
+                // } 
+
+                // meimei.receiveFlower(sender);   
+
+              
+
+                meimei.listenGoodMood(function () {
+                    // 心情好,再送
+                    // meimei.receiveFlower(sender);
+                    // 代理者， 监听下meimei的心怀
+                    meimei.listenGoodMood()
+
+                })
+
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
