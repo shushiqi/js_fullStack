@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.weui-cells {
+    font-size: 17px;
+    line-height: 1.47058824;
+    background-color: #ffffff;
+    overflow: hidden;/* 子元素超出父元素则隐藏*/
+    position: relative;
+    margin-top: 1.17647059em;
+}
+/**
+不使用border-top border-bottom
+border是盒子模型的一部分，
+*/
+
+/* 伪元素：不影响父元素的盒子模型 */
+.weui-cells:before, .weui-cells:after {
+    content: "";
+    /*定位会让元素离开文档流 */
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: scaleY(.5);
+}
+
+.weui-cells:before {
+    top: 0;
+    border-top: 1px solid #e5e5e5;
+    transform-origin: 0 0;
+}
+
+.weui-cells:after {
+    bottom: 0;
+    border-bottom: 1px solid #e5e5e5;
+    transform-origin: 0 100%;
+}
+
+
+.weui-cell {
+    position: 10px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.weui-cell__bd {
+    flex: 1;
+}
