@@ -17,3 +17,4 @@ addEventListener('keyup') 可以注册多个 dom-3时代
 
 - 事件代理（事件委托）  
 event-question.html     原理：冒泡  
+1
