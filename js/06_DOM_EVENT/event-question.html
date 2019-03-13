@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QUESTION</title>
+</head>
+<body>
+    <ul id="lists">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <!-- 点击每个li
+    输出里面的内容 -->
+    <script>
+    // const list1 = document.getElementById('list1');
+    // list1.addEventListener('click',(event) => {
+    //     console.log(event.target.innerHTML);
+    // },false)
+        const lists = document.getElementById('lists');
+        lists.addEventListener('click',(event) => {
+            console.log(event.target.innerHTML);
+        },true)
+    </script>
+</body>
+</html>
