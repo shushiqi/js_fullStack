@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>weui-page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page button js_show">
+            <div class="page__bd page__bd__spacing">
+                <a href="#" class="weui-btn weui-btn_primary" id="primary">
+                    春风得意马蹄疾，一日看尽长安花。
+                </a>
+                <a href="#" div class="weui-btn weui-btn_primary weui-btn_loading" id="loading">
+                    <i class="weui-loading"></i>
+                    少年听雨歌楼上，红烛昏罗帐；
+                </a>
+                <a href="#" div class="weui-btn weui-btn_primary weui-btn_disabled">
+                    壮年听雨客舟中，江阔云低、断雁叫西风。
+                </a>
+                <a href="#" div class="weui-btn weui-btn_advancaed">
+                    而今听雨僧庐下，鬓已星星也；
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var oLoading = document.getElementById('loading');
+        console.log(oLoading);
+        oLoading.onclick = function () {
+            console.log("123");
+            this.innerHTML = "good!";
+            console.log(this);
+        }
+
+        var oPrimary = document.getElementById('primary');
+        oPrimary.onclick = function () {
+            this.classList.add("weui-btn_active");
+        //     setTimeout(function(){
+        //     oPrimary.classList.remove("weui-btn_active");
+        // },1000);
+        setTimeout(() => {
+            this.classList.remove("weui-btn_active");
+        },1000);
+        }
+       
+    </script>
+</body>
+
+</html>
