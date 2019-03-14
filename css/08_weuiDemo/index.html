@@ -76,14 +76,24 @@
     </div>
 
     <script>
-        var oType = document.querySelectorAll('.item-price');
+        var oType = document.querySelectorAll('.item-price');       
         // console.log(oType);
         for (let i = 0; i < oType.length; i++) {
             oType[i].addEventListener('click', function () {
                 for (let j of oType) {
                     j.classList.remove('active');
                 }
-                this.classList.add('active')
+                this.classList.add('active');   
+            })
+        }
+
+        var payBtn = document.querySelectorAll('.price-way');
+        for (let i = 0; i < payBtn.length; i++) {
+            payBtn[i].addEventListener('click', function () {
+                for (let j of payBtn) {
+                    j.classList.remove('btn-active');
+                }
+                this.classList.add('btn-active');   
             })
         }
     </script>
