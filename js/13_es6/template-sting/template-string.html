@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板字符串</title>
+</head>
+
+<body>
+    <table>
+        <tbody id="tbody">
+            <!-- <tr>
+                <td>name</td>
+                <td>age</td>
+            </tr> -->
+        </tbody>
+    </table>
+
+    <script>
+        const tbody = document.getElementById('tbody');
+        const person = {
+            name: 'hanmeimei', age: 18, sex: 'w', keywords: ['sing', 'game']
+        }
+        // let str = '<tr><td>' + person.name + '</td><td>' + person.age + '</td></tr>';      
+        let str = `<tr>
+                <td>${person.name}</td>
+                <td>${person.age}</td>
+                <td>${
+            person.sex === 'w' ? '女' : '男'
+            }</td>
+                <td>${100 + 100}</td>
+                <td>${'学习' + 2 + '模板字符串'}</td>
+                <td>${'`'}</td>
+                <td>${renderKeyWords(person.keywords)}</td>
+            </tr>`;
+
+        const people = [
+            { name: 'lilei', age: 18 },
+            { name: 'hanmeimei', age: 19 },
+        ]
+
+        function renderKeyWords(arr) {
+            return arr.map(keyword => {
+                return `<li>${keyword}</li>`
+            }).join('')
+        }
+        const str1 = people.map(function (person) {
+            return `
+                <tr>
+                <td>${person.name}</td>
+                <td>${person.age}</td>
+            </tr>
+                `
+        }).join('')
+        // tbody.innerHTML = str;
+        tbody.innerHTML = str1;
+    </script>
+</body>
+
+</html>
