@@ -1,0 +1,4 @@
+- DOM 树 html结构 加上CSS，DOM树将被生成，就有了静态页面
+- DOMContentLoaded 有了元素节点 就可以做JS交互
+- 页面上还依赖于其他的一些资源 js、阻塞下载 img 是网页性能的杀手
+- window.onload 此时写js就晚了
