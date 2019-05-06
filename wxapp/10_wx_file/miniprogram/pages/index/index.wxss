@@ -1,0 +1,11 @@
+/**index.wxss**/
+.thimb-class{
+  width: 150rpx;
+  height: 150rpx;
+  border-right: 150rpx;
+}
+.floadBtn{
+  position: fixed;
+  bottom: 50rpx;
+  right: 50rpx;
+}
