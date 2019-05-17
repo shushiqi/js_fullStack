@@ -1,0 +1,15 @@
+<!-- miniprogram/pages/index/index.wxml -->
+<!-- <map id="myMap" style="width: 100%; height: 300px;" longitude="116.313972" latitude="39.980014" scale='16' subkey="KGCBZ-CVUK6-IS7SI-MJALC-ZPRSO-DMBD3" polyline="{{polyline}}" markers="{{markers}}"></map> -->
+<view class="wrapper" style="height: 100%; background:url({{backgroundImage}}); center:-187rpx / 100% no-repeat {{}}">
+  <view class="navigator" bindtap="goDiary">
+    <icon type="edit" />
+  </view>
+</view>
+<view class="container" id="canvas-wrapper" style="padding-top:{{paddingTop}}">
+  <view class="now">
+    <view class="location" bindtap="shooseLocation">
+      <icon type="dingwei" />
+      <text >{{affress}}</text>
+    </view>
+  </view>
+</view>
