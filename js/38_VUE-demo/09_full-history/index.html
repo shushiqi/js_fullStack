@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>全栈应用中，后端应负责在/启动web-server， 其他路由应交给前端打理 ./api 数据开发 大前端方向</h2>
+  <div>
+    <a href="javascript:;" data-href="/home">home</a>
+    <a href="javascript:;" data-href="/book">book</a>
+    <a href="javascript:;" data-href="/movie">movie</a>
+    <div id="content"></div>
+    <script src="./router.js"></script>
+    <script>
+      // 几千年里前端路'
+      const router = new Router(
+        [{
+          path: '/',
+          component: 'home'
+        },
+        {
+          path: '/book',
+          component: 'book'
+        },
+       {
+          path: '/movie',
+          component: 'movie'
+        }]
+      )
+    </script>
+  </div>
+</body>
+
+</html>
