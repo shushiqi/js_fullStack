@@ -1,0 +1,31 @@
+# vue-eleme-app
+
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## ref 
+`this.$refs.menuWrapper` 获取当前DOM节点 => menuWrapper
+
+## nextTick
+```js
+this.$nextTick(() => { //保证html渲染完成才执行
+            thi._initScroll()
+          })
+```
