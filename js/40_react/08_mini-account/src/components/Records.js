@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Record from './Record'
-import axios from 'axios'
-import RECORDS_API_URL from '../utils/RecordsAPI'
+import * as RecordsAPI from '../utils/RecordsAPI'
 import RecordFrom from './RecordFrom'
 
 class Records extends Component {
@@ -14,18 +13,28 @@ class Records extends Component {
     }
   }
   componentDidMount() {
-    axios.get(RECORDS_API_URL).then(
+    RecordsAPI.getAll().then(
       response => this.setState({
         records: response.data,
         isLoaded: true
       })
-      // console.log(response.data)
+      // console.log(response.data,'----')
     ).catch(
       error => this.setState({
         error,
         isLoaded: true,
       })
     )
+  }
+  addRecord(record){
+    this.setState({
+      error: null,
+      isLoaded: true,
+      records:[
+        ...this.state.records,
+        record
+      ]      
+    })    
   }
   render() {
     const { error, isLoaded, records } = this.state
@@ -54,7 +63,7 @@ class Records extends Component {
     return (
       <div>
         <h2>Records</h2>
-        <RecordFrom />
+        <RecordFrom handleNewRecord={this.addRecord.bind(this)} />
         {recordsComponent}
       </div>
     )

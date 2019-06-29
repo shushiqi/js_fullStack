@@ -28,5 +28,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "typescript": "^3.5.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
