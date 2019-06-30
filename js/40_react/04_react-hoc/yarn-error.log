@@ -1,20 +1,21 @@
 Arguments: 
-  /usr/local/bin/node /Users/zhaomeng/npm/bin/yarnpkg --cwd /Users/zhaomeng/Downloads/react-hoc
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
 
 PATH: 
-  /var/folders/2k/444qyg9s6m3_9s0qydnx740c0000gn/T/yarn--1561361577099-0.7192904320105817:/Users/zhaomeng/Downloads/react-hoc/node_modules/.bin:/Users/zhaomeng/.config/yarn/link/node_modules/.bin:/Users/zhaomeng/Downloads/react-hoc/node_modules/.bin:/Users/zhaomeng/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/Users/zhaomeng/.autojump/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/zhaomeng/.autojump/bin:/Users/zhaomeng/npm/bin:/usr/local/mysql/bin:/Users/zhaomeng/npm/bin:/usr/local/mysql/bin
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\shushiqi\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;D:\nvm;C:\Program Files\nodejs;C:\Users\shushiqi\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;D:\Docker Toolbox
 
 Yarn version: 
-  1.13.0
+  1.16.0
 
 Node version: 
-  10.15.0
+  12.4.0
 
 Platform: 
-  darwin x64
+  win32 x64
 
 Trace: 
-  Error: EINVAL: invalid argument, mkdir '/Users/zhaomeng/Downloads/react-hoc/node_modules/define-property/node_modules/is-data-descriptor/node_modules'
+  Error: read ECONNRESET
+      at TLSWrap.onStreamRead (internal/stream_base_commons.js:183:27)
 
 npm manifest: 
   {
@@ -146,9 +147,15 @@ npm manifest:
       ]
     },
     "babel": {
+      "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy" : true }]
+      ],
       "presets": [
         "react-app"
       ]
+    },
+    "devDependencies": {
+      "@babel/plugin-proposal-decorators": "^7.4.4"
     }
   }
 

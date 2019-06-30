@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    const lists = [
+        {name: 'kanna'},
+        {age: 20},
+        [{school: 'jxufe'}]
+    ];
+    // var nameObj = lists[0];
+    // var ageObj = lists[1];
+
+    // 数组 解构es6
+    const [a, b] = lists;
+
+    // e === undefined
+    const [ , , c, e] = lists;
+    const [ , , f] = lists;
+    </script>
+</body>
+</html>

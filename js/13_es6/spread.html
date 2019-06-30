@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>扩展运算符</title>
+</head>
+<body>
+    <script>
+    const arr = [6, 8, 9];
+
+    const arr1 = [0, 1, 2];
+    const arr2 = [3, 4, 5];
+
+    console.log(...arr);
+    console.log([...arr]);
+
+    const newArray = arr.concat(arr2);
+    const newArray_spread = [...arr1, ...arr2];
+
+    const min_arr = [100, 1000, 152, 3451, 1];
+    // const minNum = Math.min(...min_arr);
+        function sum(...args){
+            
+        }
+        sum();
+
+
+    </script>
+</body>
+</html>
