@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/Books/main",
+    "pages/comments/main",
+    "pages/me/main"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#EA5149",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "十七图书",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+
+    "list": [{
+      "text": "图书",
+      "pagePath": "pages/Books/main",
+      "iconPath": "static/images/book.png",
+      "selectedIconPath": "static/images/book-active.png"
+    }, 
+    {
+      "text": "评论",
+      "pagePath": "pages/comments/main",
+      "iconPath": "static/images/todo.png",
+      "selectedIconPath": "static/images/todo-active.png"
+    },
+    {
+      "text": "我",
+      "pagePath": "pages/me/main",
+      "iconPath": "static/images/me.png",
+      "selectedIconPath": "static/images/me-active.png"
+    }
+  ]
+  }
+}
