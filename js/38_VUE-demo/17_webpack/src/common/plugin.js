@@ -25,7 +25,7 @@ Toast.install = function (Vue, options) {
   }
   ['bottom', 'center', 'top'].forEach(type => {
     Vue.prototype.$toast[type] = (tips) => {
-      return Vue.prototype.$toast(tips, type)
+      return Vue.prototype.$toast(tips, type) 
     }
   })
 }
